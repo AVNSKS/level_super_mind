@@ -1,105 +1,105 @@
-**1. Introduction**
+ART Finder - Automated Research and Trigger Finder
 
-**Project Title**: Automated Research and Trigger Finder (ART Finder)
+Overview
 
-**Objective**: ART Finder aims to automate the process of ad creation for e-commerce marketers by scraping data from multiple sources, including YouTube, Reddit, and app reviews. The goal is to extract valuable insights that help marketers identify pain points, triggers, and strategies that perform well, ultimately improving ad effectiveness.
+ART Finder is a comprehensive tool that automates the research phase of ad creation for e-commerce marketers. By scraping data from YouTube comments, Reddit threads, app reviews, and competitor ads, ART Finder helps marketers identify user pain points, high-performing hooks, CTAs, and competitor strategies. This allows marketers to craft more effective, data-driven advertising campaigns.
 
-**2. Problem Statement**
+✨ Key Features
 
-In the world of e-commerce, creating effective ads that resonate with the audience is crucial. However, this process can be time-consuming, especially in the research phase. Gathering insights manually from platforms like YouTube, Reddit, and competitor ads is inefficient. ART Finder automates this process, providing quick, actionable insights and helping marketers improve their ad strategies.
+1. Research Automation:
+Data Scraping from Multiple Sources: Scrapes YouTube comments, Reddit discussions, e-commerce app reviews, and competitor ads for insights. This reduces the manual research time and provides a wealth of actionable data.
+Custom Keyword Search: Users can specify keywords like "shopping experience" or "customer satisfaction" to focus on specific pain points or topics.
+2. Actionable Insights Generation:
+Sentiment Analysis: Analyzes comments and reviews to gauge user sentiment (positive, negative, or neutral).
+Pain Point Identification: Extracts recurring complaints or issues from user feedback.
+High-Performing Hooks and CTAs: Analyzes competitor ads to identify what hooks and CTAs are driving engagement.
+3. Data Visualization Dashboard (UI in Progress):
+Intuitive Dashboards: Displays data with easy-to-understand charts, word clouds, and key metrics.
+Real-Time Sentiment and Trend Tracking: Allows marketers to view trends and sentiment analysis based on real-time scraping.
+4. Data Storage & Management:
+NoSQL Database (AstraDB): Stores large-scale, unstructured data, including comments, reviews, sentiment scores, hooks, and CTAs, making it easy to retrieve and analyze.
+🎯 How ART Finder Works
 
-**3. Project Overview**
+1. Data Collection:
+YouTube Scraping: Extracts comments, sentiment analysis, likes, and dislikes from videos related to e-commerce.
+Reddit Scraping: Collects user discussions and pain points from e-commerce-related subreddits.
+App Reviews: Scrapes reviews from e-commerce apps like Zepto, Blinkit, and BigBasket, extracting user feedback, ratings, and common complaints.
+Competitor Ads Scraping: Analyzes ads on platforms like Facebook Ads, extracting hooks, CTAs, and engagement metrics.
+2. Data Analysis:
+Sentiment Analysis: Determines overall user sentiment (positive/negative/neutral).
+Pain Points & Trends: Identifies frequent issues users face based on comments and reviews.
+Competitor Strategy Analysis: Compares high-performing hooks and CTAs from competitor ads.
+3. Data Visualization:
+After scraping and analysis, data is visualized in easy-to-read formats:
+Word Clouds: Highlight common words and phrases users mention.
+Graphs and Charts: Display sentiment trends, user pain points, and engagement metrics over time.
+🚀 Project Structure
 
-The ART Finder tool is designed to scrape user feedback, pain points, and successful ad strategies from multiple data sources. By automating the data collection and analysis process, the tool allows marketers to craft effective ads based on real user sentiment and competitor strategies.
+File/Folder	Description
+art_finder.py	Main script for running the data scraping and insights generation.
+scrapers/	Folder containing platform-specific scraping scripts (YouTube, Reddit, app reviews).
+utils/	Helper functions for data cleaning, structuring, and saving into AstraDB.
+data/	Stores raw scraped data.
+requirements.txt	Python dependencies for the project.
+ui/	Placeholder for the front-end code (web interface/dashboard).
+🌐 UI Integration (In Progress)
 
-**Key Features**:
+We are currently developing a web-based user interface for ART Finder to enhance user experience and make insights easily accessible through a dashboard. This UI will:
 
-1.	**Comprehensive Research Automation**: Scrapes data from YouTube comments, Reddit threads, and competitor ads. Collects feedback from e-commerce app reviews.
+Allow users to input keywords, topics, and brand guidelines.
+Display real-time trends and sentiment analysis.
+Visualize data through charts, graphs, and word clouds.
+Generate downloadable reports that summarize the insights.
+Tech Stack (for future UI development):
 
-2.	**Actionable Insights Generation**: Identifies high-performing hooks, CTAs, and user pain points to help marketers optimize their ads.
+Frontend: HTML, CSS, JavaScript (React or Vue.js)
+Backend: Flask or Node.js (for serving data and API connections)
+Database: AstraDB (storing scraped and processed data)
+🎨 UI Template Example (Coming Soon!)
+We are designing the user interface to be intuitive and data-rich. Here's a basic layout of how the dashboard will look:
 
-3.	**Reference Dashboard**: Organizes and visualizes data with sentiment analysis, word clouds, and key insights.
+--------------------------------------------------------
+|     ART Finder Dashboard (Brand/Keyword Inputs)      |
+--------------------------------------------------------
+|  Sentiment Analysis |  Pain Points   |  Hooks & CTAs  |
+--------------------------------------------------------
+|   Word Cloud        |  Trends Graph  |  Insights List |
+--------------------------------------------------------
+|  Download Reports   |  Recommendations  | Save Data   |
+--------------------------------------------------------
+📁 Cloning and Running the Project
 
-4.	**User-Centric Interface**: Simple inputs for brand guidelines and topic search, with easy-to-navigate dashboards for insights.
+Prerequisites
+Ensure you have the following installed:
 
-**4. Data Sources**
+Python 3.x
+Git
+Installation
+Clone the Repository:
+git clone https://github.com/your-username/ART-Finder.git
+cd ART-Finder
+Create and Activate a Virtual Environment:
+python3 -m venv env
+source env/bin/activate  # macOS/Linux
+.\env\Scripts\activate   # Windows
+Install Dependencies:
+pip install -r requirements.txt
+Run the Project:
+python art_finder.py
+🛠 Usage
 
-The following platforms have been used for scraping data:
+After installation, you can scrape data and generate insights by running the main script with platform and keyword options:
 
-1.	**YouTube**: Scraping YouTube comments on videos related to e-commerce.
+python art_finder.py --platform reddit --keywords "shopping experience"
+Argument	Description
+--platform	Platform to scrape from: youtube, reddit, app_reviews, competitor_ads
+--keywords	List of keywords to focus on (e.g., "e-commerce", "shopping")
+🛠 Future Enhancements
 
-•	**Data Extracted**: Comments, sentiment analysis (positive/negative), likes, and dislikes.
+UI Completion: Launching a complete web-based dashboard for visualization and reporting.
+Additional Platforms: Expand scraping capabilities to include platforms like Twitter, Instagram, and TikTok.
+Machine Learning Integration: Use AI to provide predictive recommendations for ad strategies.
+Contributing
 
-2.	**Reddit**: Scraping threads and comments from relevant subreddits to identify user pain points and experiences.
+We welcome contributions! Feel free to open issues or submit pull requests for improvements or bug fixes.
 
-•	**Data Extracted**: Comments, thread titles, sentiment analysis.
-
-3.	**App Reviews**: Collecting reviews from e-commerce apps such as Zepto, Blinkit, BigBasket, and others.
-
-•	**Data Extracted**: Ratings, reviews, user feedback, common complaints, and desired features.
-
-4.	**Competitor Ads**: Scraping ad data from competitor platforms like Facebook Ads.
-
-•	**Data Extracted**: Ad content, hooks, CTAs, and other performance metrics.
-
-**5. Data Extraction and Analysis**
-
-The data extraction process involves using Python-based scrapers, APIs, and libraries to collect relevant information from each platform.
-
-1.	**YouTube Scraping**:
-
-•	**Objective**: Scrape YouTube comments from videos related to e-commerce.
-
-•	**Method**: Use YouTube API to fetch video comments. The data collected includes the comment, sentiment, likes, and dislikes.
-
-2.	**Reddit Scraping**:
-
-•	**Objective**: Collect insights from user comments on Reddit threads.
-
-•	**Method**: Use the PRAW library to extract relevant threads and comments based on keywords such as “e-commerce” and “shopping experience.”
-
-3.	**App Reviews Scraping**:
-
-•	**Objective**: Extract reviews from e-commerce apps to understand customer satisfaction.
-
-•	**Method**: Use web scraping tools like Selenium and BeautifulSoup, or API-based scraping to collect reviews and ratings from apps such as Zepto and Blinkit.
-
-**6. Data Storage & Management**
-
-The data is stored in **AstraDB**, a NoSQL database designed to handle large amounts of unstructured data. Each piece of scraped data is categorized (e.g., pain points, hooks, CTAs) and stored in a structured format for easy retrieval and analysis.
-
-**7. Insights Generation**
-
-Once the data is scraped, it is processed to extract actionable insights. This includes:
-
-1.	**Identifying Common Pain Points**: Extracting recurring issues mentioned by users to understand what problems e-commerce platforms need to address.
-
-2.	**Determining High-Performing Hooks & CTAs**: Analyzing competitor ads to identify which hooks and CTAs are driving engagement.
-
-3.	**Sentiment Analysis**: Analyzing the overall sentiment of the comments and reviews to gauge customer satisfaction.
-
-These insights are then displayed on a **dashboard** using visual tools like word clouds, graphs, and charts for easy interpretation.
-
-**8. User Interface & Experience**
-
-The ART Finder tool has a user-centric interface:
-
-1.	**Input Fields**: Users can input topics, brand guidelines, or keywords they want to analyze.
-
-2.	**Dashboard**: A clear, intuitive dashboard that visualizes insights such as sentiment analysis, trends, and actionable recommendations.
-
-3.	**Reports**: Automated reports showcasing key insights and suggestions for effective ad creation.
-
-**9. Future Enhancements**
-
-Future improvements could include:
-
-1.	**Integration with Other Platforms**: Adding more data sources like Twitter or Instagram for broader insights.
-
-2.	**AI-Based Recommendations**: Using machine learning to provide predictive recommendations for ad strategies.
-
-3.	**Real-Time Data Collection**: Implementing real-time scraping and analysis to give immediate insights on trending topics.
-
-**10. Conclusion**
-
-The ART Finder project aims to provide e-commerce marketers with actionable insights by automating the research phase of ad creation. Through the use of scraping technologies and data management systems, ART Finder simplifies the ad creation process, allowing marketers to base their strategies on real user feedback and competitor trends. The tool ultimately supports more effective, data-driven advertising campaigns.
