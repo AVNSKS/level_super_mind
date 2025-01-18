@@ -93,22 +93,34 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/your-username/ART-Finder.git
    cd ART-Finder
+   ```
 Create and Activate a Virtual Environment:
-python3 -m venv env
+```bash
+   python3 -m venv env
 source env/bin/activate  # macOS/Linux
 .\env\Scripts\activate   # Windows
+```
 Install Dependencies:
+```bash
 pip install -r requirements.txt
+```
 Run the Project:
+```bash
 python art_finder.py
+```
+
 🛠 Usage
 
 After installation, you can scrape data and generate insights by running the main script with platform and keyword options:
 
+```bash
 python art_finder.py --platform reddit --keywords "shopping experience"
+```
+
 Argument	Description
 --platform	Platform to scrape from: youtube, reddit, app_reviews, competitor_ads
 --keywords	List of keywords to focus on (e.g., "e-commerce", "shopping")
+
 🛠 Future Enhancements
 
 UI Completion: Launching a complete web-based dashboard for visualization and reporting.
