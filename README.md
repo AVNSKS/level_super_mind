@@ -51,14 +51,40 @@ After scraping and analysis, data is visualized in easy-to-read formats:
 | `requirements.txt` | Python dependencies for the project.                                        |
 | `ui/`              | Placeholder for the front-end code (web interface/dashboard).                |
 
-## 🌐 UI Integration (In Progress)
+## 🌐 UI Integration 
+```bash
+Here are the Flask commands for installing and setting up its environment on macOS:
 
-We are currently developing a web-based user interface for ART Finder to enhance user experience and make insights easily accessible through a dashboard. This UI will:
+Step 1: Install Flask
 
-- Allow users to input keywords, topics, and brand guidelines.
-- Display real-time trends and sentiment analysis.
-- Visualize data through charts, graphs, and word clouds.
-- Generate downloadable reports that summarize the insights.
+pip install flask
+
+Step 2: Set Up Flask Environment
+
+1. Export Flask Application
+Replace app.py with the name of your main Python file (e.g., langflowrunner.py):
+
+export FLASK_APP=langflowrunner.py
+
+
+2. Enable Debug Mode (Optional for development)
+
+export FLASK_ENV=development
+
+
+
+Step 3: Run the Flask Application
+
+flask run
+
+Notes
+
+Use python3 and pip3 if you're managing Python 3 explicitly.
+
+Access the app in your browser at http://127.0.0.1:5000/.
+
+
+```
 
 ### Tech Stack (for future UI development):
 - **Frontend**: HTML, CSS, JavaScript (React or Vue.js)
